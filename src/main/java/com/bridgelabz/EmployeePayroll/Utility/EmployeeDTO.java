@@ -15,17 +15,18 @@ import lombok.ToString;
 @ToString
 @RequiredArgsConstructor
 public class EmployeeDTO {
+	
 	private int id;
 	
 	@Pattern(regexp = "^[A-Z]{1}[a-zA-Z\\s]{2,}$", message = "Employee name Invalid: It should have at least 2 characters starting with Capital letter.")
 	private String name;
 	
 	
-	 @NotNull(message = "department should not be empty")
+	 @NotNull(message = "Department is Required")
     private String department;
 	
 
-	 @Pattern(regexp = "male|female", message = " Gender  needs to be male or female")
+	 @Pattern(regexp = "^[M|F]{1}$", message = "Please enter valid option")
     private  String gender;
 	
 	 @Min(value = 5000, message = "salary cannot be less than 5000.")

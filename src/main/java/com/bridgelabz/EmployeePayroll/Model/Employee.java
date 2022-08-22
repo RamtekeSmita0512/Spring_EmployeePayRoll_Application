@@ -23,17 +23,10 @@ public class Employee {
 	@Id()
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	 	private int id;
-	
-	
-	  private String name;
-	
-	    private String department;
-	
-	  private  String gender;
-	
-
-	
-	    private  long salary;
+		private String name;
+		private String department;
+		private  String gender;
+		private  long salary;
 	   
 	    
 		public Employee(String name, String department, String gender, long salary, int id) {
