@@ -50,7 +50,7 @@ public class EmployeeContoller {
 	    }
 
 	    @PutMapping("/update/{empId}")
-	    public ResponseEntity<Response> updateEmployeePayrollData(@PathVariable("empId") int empId,@RequestBody EmployeeDTO empDTO) {
+	    public ResponseEntity<Response> updateEmployeePayrollData(@PathVariable("empId") int empId,@Valid @RequestBody EmployeeDTO empDTO) {
 	        
 	        Response response =employeeService.updateEmployee(empId, empDTO);
 	        return new ResponseEntity<Response>(response, HttpStatus.OK);
